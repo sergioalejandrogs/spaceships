@@ -18,3 +18,7 @@ Con Python instalado, abriendo una terminal cmd dentro de la carpeta raíz del p
 Al finalizar, para desplegar la aplicación en servidor local ejecutar el comando:
 
 ```python manage.py runserver```
+
+Una vez desplegado, visitar la página: 
+
+```http://127.0.0.1:8000/```
