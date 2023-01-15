@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %} Inventario de Naves Espaciales {% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-primary" href="{% url 'add' %}" role="button">Agregar Nave Espacial</a>
+    </div>
+    <div class="card-body">
+        <table id="table" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nave</th>
+                    <th>Imagen</th>
+                    <th>Tipo</th>
+                    <th>País de origen</th>
+                    <th>Años de operación</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for ship in ships %}
+                <tr>
+                    <td>{{ ship.id }}</td>
+                    <td>{{ ship.name }}</td>
+                    <td>
+                        <img src="{{ ship.image.url }}" width="100px" height="100px">         
+                    </td>
+                    <td>{{ ship.type }}</td>
+                    <td>{{ ship.country }}</td>
+                    <td>{{ ship.years }}</td>
+                    <td>{{ ship.description }}</td>
+                    <td> 
+                        <a name="modify" id="modify" class="btn btn-warning" href="{% url 'edit' ship.id %}" role="button">Editar</a>  
+                        <a name="delete" id="delete" class="btn btn-danger" href="{% url 'delete' ship.id %}" role="button">Eliminar</a>  
+                    </td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+        </table>
+        
+    </div>
+    
+</div>
+{% endblock %}
