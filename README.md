@@ -13,8 +13,8 @@ Este aplicativo se desarrolló usando Python 3.8.10, por lo que se sugieren esta
 
 Con Python instalado, abriendo una terminal cmd dentro de la carpeta raíz del proyecto, ejecutar el siguiente comando:
 
-"""pip install -r requirements.txt"""
+```pip install -r requirements.txt```
 
 Al finalizar, para desplegar la aplicación en servidor local ejecutar el comando:
 
-"""python manage.py runserver"""
+```python manage.py runserver```
